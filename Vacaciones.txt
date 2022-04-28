@@ -1,0 +1,48 @@
+import System.util.Scanner;
+
+public class Vacaciones{
+  public static void main(String args[]){
+  Scanner in = new Scanner(System.in);
+
+  String  nombre = "";
+  int antiguedad = 0, clave = 0;
+
+  System.out.println("Bienvenido al sistema que determina el periodo de vacaciones");
+  System.out.println("Por favor digite su nombre: ");
+  nombre = in.nextLine();	
+
+  System.out.println("Por favor ingrese la clave basada en la siguiente información: ");
+  System.out.println("Ingrese 1 si es atención al cliente, 2 si es logistica y 3 si es Gerencia");
+  clave = in.nextInt();
+
+  System.out.println("Por favor ingrese la cantidad de años trabajados");
+  antiguedad = in.nextInt();
+
+  if(clave == 1){
+    if(antiguedad <= 1){
+       System.out.println("Señor "+nombre+", del area de atención al cliente le corresponden 6 días de vacaciones");	
+    }else if(antiguedad >= 2 && antiguedad <= 6){
+       System.out.println("Señor "+nombre+", del area de atención al cliente le corresponden 14 días de vacaciones");	
+    }else if(antiguedad >= 7){
+       System.out.println("Señor "+nombre+", del area de atención al cliente le corresponden 20 días de vacaciones");	
+    }
+  }else if(clave == 2){
+    if(antiguedad <= 1){
+       System.out.println("Señor "+nombre+", del area de logistica le corresponden 7 días de vacaciones");	
+    }else if(antiguedad >= 2 && antiguedad <= 6){
+       System.out.println("Señor "+nombre+", del area de logistica  le corresponden 15 días de vacaciones");	
+    }else if(antiguedad >= 7){
+       System.out.println("Señor "+nombre+", del area de logistica  le corresponden 22 días de vacaciones");	
+    }
+  }else if(clave == 3){
+    if(antiguedad <= 1){
+       System.out.println("Señor "+nombre+", del area de gerencia le corresponden 10 días de vacaciones");	
+    }else if(antiguedad >= 2 && antiguedad <= 6){
+       System.out.println("Señor "+nombre+", del area de gerencia le corresponden 20 días de vacaciones");	
+    }else if(antiguedad >= 7){
+       System.out.println("Señor "+nombre+", del area de gerencia le corresponden 30 días de vacaciones");	
+    }
+  }
+
+ }
+}
